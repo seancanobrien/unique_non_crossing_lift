@@ -1,31 +1,10 @@
-# changes file
-*.changes
-*.chg
+# Exclude all build files except main output
+build/**/*
+!build/main.pdf
 
-# system image
-*.image
-*.img7
-*.img
+# Archive files
+*.tar.gz
+*.zip
 
-# Pharo Smalltalk Debug log file
-PharoDebug.log
-
-# Squeak Smalltalk Debug log file
-SqueakDebug.log
-
-# Dolphin Smalltalk source file
-*.sml
-
-# Dolphin Smalltalk error file
-*.errors
-
-# Monticello package cache
-/package-cache
-
-# playground cache
-/play-cache
-/play-stash
-
-# Metacello-github cache
-/github-cache
-github-*.zip
+# Files created by the `latexmk` tool
+latexmkrc

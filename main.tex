@@ -1,0 +1,50 @@
+\documentclass{amsart}
+%% \documentclass[12pt]{amsart}
+
+% for some reason this cant be inside my_preamble
+% \usepackage[]{standalone}
+\usepackage{sty/my_preamble}
+% \usepackage{amsmath,amsfonts,cite,graphicx}
+% \addbibresource{bib/bibliography.bib}
+
+\begin{document}
+
+\title{Sample title}
+
+%    Remove any unused author tags.
+
+%    author one information
+\author{Sean O'Brien}
+\address{}
+\curraddr{}
+\email{2812920O@student.gla.ac.uk}
+\thanks{My supervisor.}
+
+%    author two information
+% \author{}
+% \address{}
+% \curraddr{}
+% \email{}
+% \thanks{}
+
+\subjclass[2010]{Primary }
+
+\keywords{Group theory}
+
+\date{6 November 1997}
+
+\dedicatory{My mum.}
+
+\input{sections/pre/abstract}
+
+\maketitle
+
+\tableofcontents
+\input{sections/introduction/introduction_main}
+
+
+% \printbibliography
+\bibliographystyle{alpha}
+\bibliography{bib/refs}
+
+\end{document}

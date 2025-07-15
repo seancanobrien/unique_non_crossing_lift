@@ -1,0 +1,64 @@
+% !TeX root = ../main.tex
+% ------ Mathematical expressions --------------------------------------
+
+% Posets
+\newcommand{\poset}[1]{$(#1,\leq)$} % Poset with a relation
+\newcommand{\posetlabel}[2]{$(#1,\leq, #2)$} % Poset with a relation
+
+% spacing around ;
+\mathcode`\;="303B
+%proper colon eq
+\def\coloneq{\coloneqq}
+
+% ------ Names of folk with attached objects ---------------------------
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
+
+\newcommand{\acts}{\,\rotatebox[origin=c]{-180}{$\circlearrowright$}\,}
+
+\DeclareMathOperator{\conf}{Conf}
+\DeclareMathOperator{\confu}{\overline{Conf}}
+\DeclareMathOperator{\image}{Im}
+\DeclareMathOperator{\id}{Id}
+\DeclareMathOperator{\sal}{{Sal}}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\aff}{Aff}
+\DeclareMathOperator{\isom}{Isom}
+
+\renewcommand{\phi}{\varphi}
+
+% -----  Custom set comprehension  --------------------------------------------
+
+\providecommand\given{} % is redefined in \Set
+\newcommand\SetSymbol[1][]{\nonscript\:#1\vert\nonscript\:}
+\DeclarePairedDelimiterX\Set[1]{\{}{\}}{
+	\renewcommand\given{\,\SetSymbol[\delimsize]\,}
+	#1
+}
+
+% -----  Custom group presentation comprehension  ------------------------------
+
+\providecommand\relations{} % is redefined in \Set
+\DeclarePairedDelimiterX\GroupPres[1]{\langle}{\rangle}{
+	\renewcommand\relations{\mkern1mu\SetSymbol[\delimsize]\mkern1mu}
+	\mkern2mu#1\mkern3mu
+}
+
+% -----  Custom abs  ------------------------------
+
+\DeclarePairedDelimiterX\Abs[1]{|}{|}{
+	\mkern1mu#1\mkern1.2mu
+}
+
+% vertical equal to 
+\newcommand{\verteq}{\rotatebox{90}{$\,=$}}
+\newcommand{\smallvertequalto}[2]{\underset{\scriptstyle\overset{\mkern4mu\verteq}{#2}}{#1}}
+
+%vertical \in
+\newcommand{\vertin}{\rotatebox{-90}{$\mkern0mu\in\mkern3mu$}}
+\newcommand{\smallvertin}[2]{\underset{\scriptstyle\overset{\mkern-2mu\vertin}{\mkern4mu#2}}{#1}}

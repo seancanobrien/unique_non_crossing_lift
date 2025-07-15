@@ -1,0 +1,147 @@
+% !TeX root = ../main.tex
+
+% ======  LOADING PACKAGES  ====================================================
+\usepackage{import}
+
+% \setlength{\cftbeforetoctitleskip}{1em}
+
+% Bibliography
+\usepackage{cite}
+
+% Images
+\usepackage{graphicx}
+\graphicspath{{figs/}}
+
+%% The following is very useful in keeping track of labels while
+%% writing.  The variant   \usepackage[notcite]{showkeys}
+%% does not show the labels on the \cite commands.
+%\usepackage{showkeys}
+
+% Captions
+\usepackage[font=footnotesize]{caption}
+\usepackage[font=scriptsize]{subcaption}
+\captionsetup{format=hang}
+
+% Text colours
+\usepackage{xcolor}
+% For a question 
+\newcommand{\what}[1][ ]{{\footnotesize
+			\textcolor{red!40!white}{$\circ\bullet$} \textcolor{red}{#1} \textcolor{red!40!white}{$\bullet\circ$}
+		}}
+
+%Enumerate using roman numerals etc
+\usepackage{enumerate}% http://ctan.org/pkg/enumerate
+
+% Automatically loaded when using amsart document class
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+\usepackage{mathtools}
+
+% ----- Custom maths macros ----------------------------------------------------
+\usepackage{sty/my_macros}
+% ------------------------------------------------------------------------------
+
+% tikz
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tikz-cd}
+
+% Automatically loaded when using amsart document class
+% \usepackage{amsthm}
+
+% Hyperref ####### BE CAREFUL this needs to be loaded immediately after amsthm
+\usepackage[
+	colorlinks        = true,%     % Liens en couleur : true ou false
+	urlcolor          = blue,%     % Couleur des liens externes
+	linkcolor         = black,%    % Couleur des liens internes
+	citecolor         = black,%    % Couleur des citations
+]{hyperref}% 
+\usepackage[capitalize]{cleveref}
+
+% ======  Manipulating packages  ===============================================
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corrolary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+
+\newtheorem{definition}[theorem]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+% ------------------------------------------------------------------------------
+% Custom mid-equation counter
+
+\newcounter{relctr} %% <- counter for relations
+\everydisplay\expandafter{\the\everydisplay\setcounter{relctr}{0}} %% <- reset every eq
+\renewcommand*\therelctr{\alph{relctr}} %% <- label format
+
+\newcommand\labelrel[2]{%
+	\begingroup
+	\refstepcounter{relctr}%
+	\stackrel{\textnormal{(\alph{relctr})}}{\mathstrut{#1}}%
+	\originallabel{#2}%
+	\endgroup
+}
+\AtBeginDocument{\let\originallabel\label} %% <- store original definition
+
+
+% -----  TikZ stuff  -----------------------------------------------------------
+\usetikzlibrary{arrows,decorations,backgrounds}
+% For detailed rekative positioning of nodes e.g. "below left=of othernode]"
+\usetikzlibrary{positioning}
+% For exact numeric calculation of relative positioning
+% (allows coordinate addition etc)
+\usetikzlibrary{calc}
+\usetikzlibrary{math}
+
+% for halo around text
+\usepackage[outline]{contour}
+\contourlength{1.2pt}
+% For arrows in lines etc.
+\usetikzlibrary{decorations.markings, arrows}
+
+% polar plots
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\pgfplotsset{compat=newest}
+
+% Makes things slow
+\usetikzlibrary{intersections}
+% For easier use of arrows mid line and multi-arrows mid line etc
+% https://tex.stackexchange.com/questions/85244/adding-double-arrows-to-the-middle-of-a-line-with-tikz
+\tikzset{
+	arrow_me/.style={
+			postaction=decorate,
+			decoration={
+					markings,
+					mark=at position .6 with {\arrow[thick]{#1}}
+				}
+		},
+	arrow_me_ns/.style={
+			postaction=decorate,
+			decoration={
+					markings,
+					mark=at position .3 with {\arrow[thick]{#1}}
+				}
+		},
+	arrow_me_ne/.style={
+			postaction=decorate,
+			decoration={
+					markings,
+					mark=at position .9 with {\arrow[thick]{#1}}
+				}
+		}
+}
+\pgfarrowsdeclaredouble{<<s}{>>s}{stealth}{stealth}%   double stealth
+\pgfarrowsdeclaretriple{<<<s}{>>>s}{stealth}{stealth}% triple stealth
+
+% Custom tikz elements
+\tikzstyle{FSC}=[circle,draw=black!50,fill=black!20,thick, inner sep=0pt,minimum size=1.5mm]
+\tikzstyle{a}=[red]
+\tikzstyle{b}=[blue]
+
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
