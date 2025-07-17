@@ -62,3 +62,10 @@
 %vertical \in
 \newcommand{\vertin}{\rotatebox{-90}{$\mkern0mu\in\mkern3mu$}}
 \newcommand{\smallvertin}[2]{\underset{\scriptstyle\overset{\mkern-2mu\vertin}{\mkern4mu#2}}{#1}}
+
+% including tikz generated from svg2tikz
+\newcommand{\includetikz}[2][]{%
+	\begin{tikzpicture}[#1,every node/.append style={scale=1}, inner sep=0pt, outer sep=0pt]
+		\input{#2}
+	\end{tikzpicture}%
+}

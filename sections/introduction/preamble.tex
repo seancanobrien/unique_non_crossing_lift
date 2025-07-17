@@ -8,31 +8,102 @@ A reflection in $F$ is a conjugate of any $f_i$ in $F$.
 Denote the set of all reflections in $F$ by $R$.
 Similarly, a reflection in $U$ is a conjugate of  any  $s_i$ in $U$.
 Denote the set of all reflections in $U$ by  $T$.
-So, a reflection in $U$ is some word $wu_i w^{-1}$, where $w=u_1\ldots u_k$ is a word in $S$.
-We may assume $ws_iw^{-1}$ is a reduced word.
-Thus, since every generator in $S$ is of order 2, we may assume that $w$ is a positive word where each factor has exponent  $+1$,  i.e.~each $u_i \in S$, and each $u_i$ is not equal to  $u_{i+1}$.
+So, a reflection in $U$ is some word $us_i u^{-1}$, where $u=u_1\ldots u_k$ is a word in $S$.
+We may assume $us_iu^{-1}$ is a reduced word.
+Thus, since every generator in $S$ is of order 2, we may assume that $u$ is a positive word where each factor has exponent  $+1$,  i.e.~each $u_i \in S$, and each $u_i$ is not equal to  $u_{i+1}$.
 
 Since we will be using this notation a lot, let $s_i: w$ denote  $ws_iw^{-1}$.
-Let $\phi \colon F \to U$ be the surjective homomorphism defined by $a_i \mapsto u_i$.
-A lift of a reflection $s_i : w$ in $U$ is a choice of a positive or negative power for each $u_i$ in $w$, i.e.~a choice of a length $2k +1$ element in $\phi^{-1}(s_i : w) \cap R$.
+Let $\phi \colon F \to U$ be the surjective homomorphism defined by $a_i \mapsto s_i$.
+A lift of a reflection $s_i : u$ in $U$ is a choice of a positive or negative power for each $u_i$ in $u$, i.e.~a choice of a length $2k +1$ element in $\phi^{-1}(s_i : u) \cap R$.
 
 Let $\C_n$ denote $\C \setminus \Set{z_1,\ldots,z_n}$.
 Our free group $F$ is $\pi_1(\C_n, z_0)$ for any  $z_0 \notin \Set{z_1,\ldots,z_n} $.
-We make the choice of $\Set{z_1,\ldots,z_n}$ to be $n$ evenly spaced points on the imaginary axis and within the unit circle, and $z_0 = -1$.
+We make the choice of $\Set{z_1,\ldots,z_n}$ to be $n$ evenly spaced points on the imaginary axis which are within the unit circle, and $z_0 = -1$.
 We draw a line $\lambda_i$ from each  $z_i$ to $z_0$.
-For reasons that will become clear, we draw these lines in a roundabout way.
+For reasons that will become clear, we draw these lines in a roundabout way, but then for diagramatic readability, we draw that as on the left diagram below.
+\[
+	\includetikz[baseline=(text57948.center)]{figs/points_on_C_simplified.tex}
+	\hspace{-1em}\text{equivalent to}\quad
+	\includetikz[baseline=(text57948.center)]{figs/points_on_C.tex}
+	.\]
+In the following, let each $\epsilon_i$ be in $\Set{\pm 1}$.
+A loop $l$ in  $\pi_1(\C_n, z_0)$ represents the element $v = f^{\epsilon_1}_{\alpha_1}\cdots f^{\epsilon_k}_{\alpha_k} \in F$, if $l$ passes through each  $\lambda_i$ in the order specified in  $u$, passing from bottom to top if  $\epsilon_i=1$ and top to bottom if  $\epsilon_i=-1$.
+We say that some $v \in F$ is non-crossing if there exists a non-crossing loop which represents $v$.
+One can see pictorially that any non-crossing $u = f^{\epsilon_1}_{\alpha_1}\cdots f^{\epsilon_k}_{\alpha_k} \in F$ must be \emph{square free}.
+So all $f_{\alpha_i} \neq f_{\alpha_{i+1}}$ and all  $\epsilon_k \in \Set{\pm 1} $ in this setting.
 
-\begin{figure}[h]
-	\centering
-	\input{figs/points_on_C.tex}
-	\caption{Arrangement of $n+1$ points on the sphere, illustrating  $\tilde{\C}_n$.}
-\end{figure}
+We will want to talk about specific paths in $\C_n$, not just loops up to homotopy.
+For this, we use the following definition,
+\begin{definition}
+	\label{def:free_path}
+	Let $\Omega \notin \Set{z_0,\ldots,z_n}$ denote an \emph{end symbol}.
+	Let $v$ be some element in $F$.
+	A path representing $v\Omega$ is a path (not a loop) that starts at  $z_0$, crosses each $\lambda_i$ in the correct order and orientation as above, but then does not continue back to  $z_0$.
+	Once the path has crossed the final $\lambda_k$ (in the correct orientation), it stops a short distance away from that crossing.
+\end{definition}
+We say that $v\epsilon$ is non-crossing if there exists a non-crossing path that represents  $u\Omega$.
+For example, the following is a non-crossing path that represents $f_3^{-1}f_2f_3\Omega$.
+\[
+	\includetikz[]{figs/non_crossing_path.tex}
+\]
+A path (possibly a path or a loop) $p$ in $\C_n$ intersects the  $\lambda_i$ at certain points.
+We can order these points by closeness to  $z_n$.
+We say that a crossing of $p$ across  $\lambda_i$ is \emph{close}, if that crossing is the closest to  $z_i$ along all of  $p$.
 
-We should think of these lines meeting  $z_0$ somehow, as in the
-We can put these points on the sphere.
+\begin{lemma}
+	\label{lem:reflection_close_turns}
+	Let $v \in F$, and let $f_i \in A$, which is the generating set for $F$.
+	The following are equivalent.
+	\begin{enumerate}
+		\item $f_i : v$ is non-crossing.
+		\item There is a non-crossing path representing $vf_i\Omega$ such that the final crossing of $\lambda_i$ is close.
+	\end{enumerate}
+\end{lemma}
+\begin{proof}
+	$(2) \implies (1)$ is simple.
+	To construct a non-crossing path for $f_i : v$, we follow the path given by (2), then turn in a positive orientation around $z_i$, then follow backwards along our original path, keeping it close on our left as we go back to  $z_0$.
+	We follow this procedure in the following example.
+	\[
+		\includetikz[baseline=(current bounding box.center)]{figs/non_crossing_path_example_start.tex}
+		\quad\leadsto\quad
+		\includetikz[baseline=(current bounding box.center)]{figs/non_crossing_path_example_end.tex}
+	\]
+	% In order to show $(1) \implies (2)$, assume we have a non-crossing representative loop $l$ for $f_i : v$, and that the important crossing of $\lambda_i$ is not close.
+	We now show $(1) \implies (2)$.
+	Let $v = f^{\epsilon_1}_{\alpha_1}f^{\epsilon_2}_{\alpha_2}\cdots f^{\epsilon_n}_{\alpha_k}$.
+	Let $l$ be a non-crossing loop representing  $f_i : v$.
+	We work from the middle outwards to construct a picture of what $l$ could look like.
 
-\begin{figure}[h]
-	\centering
-	\input{figs/points_on_sphere.tex} % ← Path to the exported file
-	\caption{Arrangement of $n+1$ points on the sphere, illustrating  $\tilde{\C}_n$.}
-\end{figure}
+	Before turning around $z_i$,  $l$ passed through $\lambda_{\alpha_k}$ and right after turning around  $z_i$, it passed through  $\lambda_{\alpha_k}$ in the opposite direction.
+	Similarly, it passed through  $\lambda_{\alpha_{k-1}}$ just before passing through  $\lambda_{\alpha_k}$, and just after in the opposite direction, and so on.
+	This gives us the following picture, where $l$ is the submarine shaped line in black.
+	\[
+		\includetikz[baseline=(current bounding box.center)]{figs/central_turn.tex}
+	\]
+	This picture is misleading in many ways.
+	For instance, there is no reason to assume that $\lambda_x \neq \lambda_y$ for $x \neq y$.
+	However, the important features of this picture are the regions, denoted $r_0, \ldots, r_k$ which are bounded by $l$ and the $\lambda$ lines.
+	By the above argument, these regions exist exactly as they are depicted in the above picture, in that there are no features inside these regions, apart from $z_i$ inside  $r_k$.
+
+	Now assume there is a part of $l$ that crosses  $\lambda_i$ closer to  $z_i$.
+	Being non crossing, this part of $l$ is square free, so must exit (on both ends) the region $r_k$ through $\lambda_{\alpha_k}$.
+	Then both ends of this part of  $l$ are in  $r_{k-1}$, and by the same argument both ends must exit  $r_{k-1}$ through  $\lambda_{\alpha_{k-1}}$, and so on, leading to a contradiction.
+\end{proof}
+
+\begin{theorem}
+	Let $u \in U$ and $s_i \in S$.
+	If there is a non-crossing lift $f_i : v$ for $s_i : u$, then it is unique.
+\end{theorem}
+\begin{proof}
+	We do this by inducting on the length of $u$, which we denote $\ell(u)$.
+	The statement is vacuous when $\ell(u) = 0$.
+	Assume this is true for all $s_i$ and $\ell(u_0) < k$.
+	Now suppose we have some reflection $s_i : u$ with $u = u_1\cdots u_{k+1}$ where each $u_i \in S$.
+	And suppose this reflection has a non-crossing lift.
+	There exists a maximal strict prefix $u^\prime = u_1u_2\cdots u_j$ of  $u$ such that  $u_j : u_1\cdots u_{j-1}$ has a non-crossing lift.
+	By induction and by \cref{lem:reflection_close_turns}, there is a unique non-crossing lift for $u_1\cdots u_j \Omega$.
+	Thus, to complete our proof, we need to show that the choices of travelling positively or negatively around $u_{j},\ldots,u_k$ are unique.
+	We have a choice of how to travel around
+\end{proof}
+
+
