@@ -28,9 +28,15 @@ For reasons that will become clear, we draw these lines in a roundabout way, but
 	.\]
 In the following, let each $\epsilon_i$ be in $\Set{\pm 1}$.
 A loop $l$ in  $\pi_1(\C_n, z_0)$ represents the element $v = f^{\epsilon_1}_{\alpha_1}\cdots f^{\epsilon_k}_{\alpha_k} \in F$, if $l$ passes through each  $\lambda_i$ in the order specified in  $u$, passing from bottom to top if  $\epsilon_i=1$ and top to bottom if  $\epsilon_i=-1$.
-We say that some $v \in F$ is non-crossing if there exists a non-crossing loop which represents $v$.
+We say that some $v \in F$ is non-crossing if there exists a non-crossing loop which represents the free reduction of $v$.
 One can see pictorially that any non-crossing $u = f^{\epsilon_1}_{\alpha_1}\cdots f^{\epsilon_k}_{\alpha_k} \in F$ must be \emph{square free}.
 So all $f_{\alpha_i} \neq f_{\alpha_{i+1}}$ and all  $\epsilon_k \in \Set{\pm 1} $ in this setting.
+
+Let $l_i$ represent a loop just around $z_i$ that remains a close distance around  $z_i$ for its entirety.
+\begin{lemma}
+	Let $v \in F$, and let $f_i \in A$, which is the generating set for $F$.
+	Any non-crossing loop representing $f_i : v$ is homotopy equivalent to $\gamma l_i \gamma^{-1}$, where gamma is a non-crossing representative of $v\Omega$ concatenated with a path close to $z_i$
+\end{lemma}
 
 We will want to talk about specific paths in $\C_n$, not just loops up to homotopy.
 For this, we use the following definition,
@@ -56,11 +62,12 @@ We say that a crossing of $p$ across  $\lambda_i$ is \emph{close}, if that cross
 	The following are equivalent.
 	\begin{enumerate}
 		\item $f_i : v$ is non-crossing.
-		\item There is a non-crossing path representing $vf_i\Omega$ such that the final crossing of $\lambda_i$ is close.
+		\item There exists a non-crossing path representing $vf_i\Omega$ such that the final crossing of $\lambda_i$ is close.
+		\item There exists a non-crossing path for $vf_i \Omega$ such that we can alter the path just before and after the central crossing of $\lambda_i$, so that this altered path is a non-crossing representative for $vf_i^{-1} \Omega$.
 	\end{enumerate}
 \end{lemma}
 \begin{proof}
-	$(2) \implies (1)$ is simple.
+	We first show $(2) \implies (1)$.
 	To construct a non-crossing path for $f_i : v$, we follow the path given by (2), then turn in a positive orientation around $z_i$, then follow backwards along our original path, keeping it close on our left as we go back to  $z_0$.
 	We follow this procedure in the following example.
 	\[
@@ -70,26 +77,55 @@ We say that a crossing of $p$ across  $\lambda_i$ is \emph{close}, if that cross
 	\]
 	% In order to show $(1) \implies (2)$, assume we have a non-crossing representative loop $l$ for $f_i : v$, and that the important crossing of $\lambda_i$ is not close.
 	We now show $(1) \implies (2)$.
-	Let $v = f^{\epsilon_1}_{\alpha_1}f^{\epsilon_2}_{\alpha_2}\cdots f^{\epsilon_n}_{\alpha_k}$.
+	Let $v = f^{\epsilon_1}_{\alpha_1}f^{\epsilon_2}_{\alpha_2}\cdots f^{\epsilon_n}_{\alpha_k}$, which we may assume is freely reduced.
 	Let $l$ be a non-crossing loop representing  $f_i : v$.
 	We work from the middle outwards to construct a picture of what $l$ could look like.
 
 	Before turning around $z_i$,  $l$ passed through $\lambda_{\alpha_k}$ and right after turning around  $z_i$, it passed through  $\lambda_{\alpha_k}$ in the opposite direction.
 	Similarly, it passed through  $\lambda_{\alpha_{k-1}}$ just before passing through  $\lambda_{\alpha_k}$, and just after in the opposite direction, and so on.
-	This gives us the following picture, where $l$ is the submarine shaped line in black.
+	This gives us the following picture, where $l$ is the line in black.
 	\[
 		\includetikz[baseline=(current bounding box.center)]{figs/central_turn.tex}
 	\]
 	This picture is misleading in many ways.
 	For instance, there is no reason to assume that $\lambda_x \neq \lambda_y$ for $x \neq y$.
+	We have also neglected to show whether each $z_{\alpha_j}$ is above or below each  $\lambda_{\alpha_j}$.
+	This is because we do not know any of the values of $\epsilon_j$.
 	However, the important features of this picture are the regions, denoted $r_0, \ldots, r_k$ which are bounded by $l$ and the $\lambda$ lines.
-	By the above argument, these regions exist exactly as they are depicted in the above picture, in that there are no features inside these regions, apart from $z_i$ inside  $r_k$.
+	By working from the centre of $f_i : v$, we can see that these regions exist exactly as they are depicted in the above picture.
 
-	Now assume there is a part of $l$ that crosses  $\lambda_i$ closer to  $z_i$.
-	Being non crossing, this part of $l$ is square free, so must exit (on both ends) the region $r_k$ through $\lambda_{\alpha_k}$.
-	Then both ends of this part of  $l$ are in  $r_{k-1}$, and by the same argument both ends must exit  $r_{k-1}$ through  $\lambda_{\alpha_{k-1}}$, and so on, leading to a contradiction.
+	Now, assume that somewhere in $l$, there is a turn closer to $z_i$, which occurs inside region $r_k$.
+	To reach region $r_k$, we must go via the regions $r_{k-1}$, $r_{k-2}$ and so on.
+	Suppose we turn back inside at index $m$, as depicted in the following picture.
+
+	\[
+		\includetikz[baseline=(current bounding box.center)]{figs/central_turn_back.tex}
+	\]
+	This would involve both ends of $l$ going back in to $r_{m}$, having just passed out of region $r_{m}$.
+	The only way this could happen is if there was a subword $f_{\alpha_m}f_{\alpha_m}^{-1}$  or $f_{\alpha_m}^{-1}f_{\alpha_m}$ somewhere in $l$.
+	We know this is not the case because  $v$ is a reduced word.
+
+	We now show $(2) \implies (3)$.
+	Suppose a non-crossing path $p$ representing  $vf_i\Omega$ such that the final crossing of $\lambda_i$ is close.
+	Since the crossing is close, we can alter the last part of the path path by moving the crossing point arbitrarily close to $z_i$.
+	We then move the path so that it goes to the left of $z_i$ and passes back through  $\lambda_i$ from top to bottom.
+
+	We finally show  $(3) \implies (2)$.
+	Suppose that all non-crossing paths representing $vf_i \Omega$ have a non-close final crossing of $\lambda_i$.
+	Then at their ends, all non-crossing paths representing  $vf_i \Omega$ look like the following picture, where $\Omega$ signifies the end of the path.
+	\[
+		\includetikz[baseline=(current bounding box.center)]{figs/cant_move_around_point.tex}
+	\]
+	The lines $\lambda_a$ and $\lambda_b$ are the lines that occur adjacent to the closer crossing of  $\lambda_i$.
+	We see that there is no way to alter the end of the path so that we cross  $\lambda_i$ from top to bottom at the end of the path.
 \end{proof}
-
+\begin{lemma}
+	Let $v \in F$ and let  $f_i \in A$.
+	The following are equivalent.
+	\begin{enumerate}
+		\item
+	\end{enumerate}
+\end{lemma}
 \begin{theorem}
 	Let $u \in U$ and $s_i \in S$.
 	If there is a non-crossing lift $f_i : v$ for $s_i : u$, then it is unique.

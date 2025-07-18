@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg23979"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="cant_move_around_point.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview23981"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="6.2074635"
+     inkscape:cx="420.46159"
+     inkscape:cy="288.92639"
+     inkscape:window-width="1920"
+     inkscape:window-height="1062"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs23976">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect11779"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect11771"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8610"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8606"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8602"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect8598"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37949"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37937"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37869"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37857"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37847"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37837"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37827"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect37817"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect30823"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect21500"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect21506"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect21500-6"
+       is_visible="true"
+       lpeversion="1" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect21506-7"
+       is_visible="true"
+       lpeversion="1" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#819d43;stroke-width:0.1;stroke-dasharray:none"
+       d="m 121.38773,79.468803 h 10.75324"
+       id="path2776-7"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="131.5607"
+       y="79.085747"
+       id="text57948-6"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="131.5607"
+         y="79.085747"
+         id="tspan57946-2">$\scriptscriptstyle\lambda_i$</tspan></text>
+    <circle
+       style="fill:#979797;fill-opacity:1;stroke:#000000;stroke-width:0.487347;stroke-dasharray:none"
+       id="circle57944"
+       cx="121.38774"
+       cy="79.443802"
+       r="0.45766878" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="117.73779"
+       y="79.713852"
+       id="text21055"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="117.73779"
+         y="79.713852"
+         id="tspan21053">$\scriptstyle z_i$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="131.42026"
+       y="11.583069"
+       id="text57948-9-0"
+       transform="rotate(26.030127)"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="131.42026"
+         y="11.583069"
+         id="tspan57946-1-9">$\cdots$</tspan></text>
+    <g
+       id="g11767"
+       transform="translate(2.6458334,-0.14826312)">
+      <path
+         style="fill:none;stroke:#819d43;stroke-width:0.0817244;stroke-dasharray:none"
+         d="m 120.15103,68.628597 -9.86552,5.942505"
+         id="path2776"
+         sodipodi:nodetypes="cc" />
+      <path
+         style="fill:none;stroke:#819d43;stroke-width:0.0817244;stroke-dasharray:none"
+         d="m 120.15103,90.555533 -9.86552,-5.942505"
+         id="path11763"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-dasharray:none"
+       d="m 118.25702,89.464987 c 1.7959,-0.954825 3.32191,-2.41092 4.35985,-4.160098 1.03795,-1.749179 1.58477,-3.786311 1.5623,-5.820136 -0.023,-2.079595 -0.64171,-4.149275 -1.76389,-5.90026 -1.12219,-1.750986 -2.74422,-3.177666 -4.62411,-4.067192"
+       id="path11769"
+       inkscape:path-effect="#path-effect11771"
+       inkscape:original-d="m 118.25702,89.464987 c 1.97432,-3.326479 3.94837,-6.653225 5.92215,-9.980234 1.97379,-3.327011 -4.2584,-6.644703 -6.388,-9.967452" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="57.897507"
+       y="135.01256"
+       id="text11775"
+       transform="rotate(-27.709284)"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="57.897507"
+         y="135.01256"
+         id="tspan11773">$\cdots$</tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.15;stroke-dasharray:none"
+       d="m 131.61407,88.028213 c -1.57127,-1.606135 -2.69083,-3.649568 -3.19871,-5.838315 -0.40194,-1.732172 -0.42339,-3.551579 -0.0624,-5.292746"
+       id="path11777"
+       inkscape:path-effect="#path-effect11779"
+       inkscape:original-d="m 131.61407,88.028213 c -1.06597,-1.945841 -2.13221,-3.891944 -3.19871,-5.838315 -1.0665,-1.94637 -0.0413,-3.528232 -0.0624,-5.292746" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="127.9688"
+       y="75.857346"
+       id="text57948-6-0"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="127.9688"
+         y="75.857346"
+         id="tspan57946-2-9">$\scriptscriptstyle\Omega$</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.179006"
+       id="path5724"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="104.65864"
+       sodipodi:cy="85.690186"
+       sodipodi:r1="0.86860806"
+       sodipodi:r2="0.43430403"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 105.52725,85.690186 -1.30292,0.752236 v -1.504473 z"
+       inkscape:transform-center-x="-0.060802573"
+       transform="matrix(0.53554944,0.14562097,-0.14754085,0.54261025,85.132085,20.917122)"
+       inkscape:transform-center-y="-0.063241975" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="159.58827"
+       y="-6.6079502"
+       id="text11910"
+       transform="rotate(36.517464)"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="159.58827"
+         y="-6.6079502"
+         id="tspan11908">$\cdots$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="122.17142"
+       y="67.504028"
+       id="text57948-6-3"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="122.17142"
+         y="67.504028"
+         id="tspan57946-2-6">$\scriptscriptstyle\lambda_b$</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:0.881944px;font-family:'Noto Mono';-inkscape-font-specification:'Noto Mono';fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="122.70058"
+       y="93.026276"
+       id="text57948-6-06"><tspan
+         sodipodi:role="line"
+         style="font-size:0.881944px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.05;stroke-dasharray:none;stroke-opacity:1"
+         x="122.70058"
+         y="93.026276"
+         id="tspan57946-2-2">$\scriptscriptstyle\lambda_a$</tspan></text>
+  </g>
+</svg>
