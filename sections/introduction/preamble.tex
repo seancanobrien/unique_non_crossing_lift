@@ -116,8 +116,13 @@ We say that a crossing of $p$ across  $\lambda_i$ is \emph{close}, if that cross
 	\[
 		\includetikz[baseline=(current bounding box.center)]{figs/cant_move_around_point.tex}
 	\]
+	Call the path $p$.
 	The lines $\lambda_a$ and $\lambda_b$ are the lines that occur adjacent to the closer crossing of  $\lambda_i$.
-	We see that there is no way to alter the end of the path so that we cross  $\lambda_i$ from top to bottom at the end of the path.
+	Let  $p_\text{close}$ denote the segment of $p$ that is between  $\lambda_a$ and  $\lambda_b$.
+	It is possible that $\lambda_a = \lambda_b$, but this case does not cause issues for our argument.
+	Irrespective of the orientation of the crossing of $\lambda_a$ and $\lambda_b$ by $p$, the end of $p$ is inside a region bounded by $p_\text{close}$, $\labda_a$, and  $\lambda_b$.
+	This region does not contain $z_i$.
+	We see that there is no way to alter the end of the path so that we cross $\lambda_i$ from top to bottom at the end of the path, unless we cross $\lambda_a$ or $\lambda_b$ first.
 \end{proof}
 \begin{lemma}
 	Let $v \in F$ and let  $f_i \in A$.
@@ -134,9 +139,9 @@ We say that a crossing of $p$ across  $\lambda_i$ is \emph{close}, if that cross
 	We do this by inducting on the length of $u$, which we denote $\ell(u)$.
 	The statement is vacuous when $\ell(u) = 0$.
 	Assume this is true for all $s_i$ and $\ell(u_0) < k$.
-	Now suppose we have some reflection $s_i : u$ with $u = u_1\cdots u_{k+1}$ where each $u_i \in S$.
+	Now suppose we have some reflection $s_i : u$ with $u = s_{\alpha_1}\cdots s_{\alpha_k}$.
 	And suppose this reflection has a non-crossing lift.
-	There exists a maximal strict prefix $u^\prime = u_1u_2\cdots u_j$ of  $u$ such that  $u_j : u_1\cdots u_{j-1}$ has a non-crossing lift.
+	There exists a maximal strict prefix $u^\prime = s_{\alpha_1}s_{\alpha_2}\cdots s_{\alpha_j}$ of  $u$ such that  $s_{\alpha_j} : s_{\alpha_1}\cdots s_{\alpha_{j-1}}$ has a non-crossing lift.
 	By induction and by \cref{lem:reflection_close_turns}, there is a unique non-crossing lift for $u_1\cdots u_j \Omega$.
 	Thus, to complete our proof, we need to show that the choices of travelling positively or negatively around $u_{j},\ldots,u_k$ are unique.
 	We have a choice of how to travel around
